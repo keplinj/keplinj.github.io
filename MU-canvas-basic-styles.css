@@ -199,7 +199,7 @@ h1.page-title {
     align-items: center;
     text-align: center;
     background-color: #c3142d;
-    padding: 0.4em 0em 0.2em 0em;
+    padding: 0.4em 0em;
 }
 
 h1.page-title:before, h1.page-title:after {
@@ -700,7 +700,7 @@ div.header-container {
     z-index: -1;
     margin-top: -2%;
     padding: 0;
-    border-top: 10px solid #c3142d;
+    border-top: 5px solid #c3142d;
 }
 
 .header-container img {
@@ -709,7 +709,7 @@ div.header-container {
     position: relative;
     display: block;
     float: none;
-    border-top: 10px solid #c3142d;
+    border-top: 5px solid #c3142d;
     margin: 0;
     padding: 0;
 }
