@@ -1,7 +1,7 @@
 ﻿/***
 * Miami University Canvas CSS V1.0.0
-* Copyright 2019, Miami University
-* 01/26/2020
+* Copyright 2020, Miami University
+* 01/28/2020
 ***/
 
 
@@ -190,7 +190,7 @@ h2, h2.course-title, h3, h4, h5, h6 {
 
 h1.page-title {
     font-family: Georgia,"Times New Roman",serif !important;
-	font-weight: 700 !important;
+	font-weight: 500 !important;
     line-height: 1.2em;
     color: #ffffff;
     display: flex;
@@ -422,16 +422,19 @@ div.gallery-tile-1 img {
 
 div.gallery-tile-1:hover img {
   	filter: grayscale(0);
-	transition: all .5s
+	transition: all .3s
 }
 
 div.gallery-title-1 {
 	position: absolute;
-	bottom: 2em;
-	left: 2em;
-	right: 2em;
-	background: rgba(0, 4, 9, 0.7);
-	padding: 1em 0.5em 0.5em 0.5em;
+	top: auto;
+    bottom: 10%;
+    left: 0;
+    right:0;
+	background: rgba(0,0,0, 0.6);
+	ptext-shadow: 0 0 6px rgba(0,0,0,.9);
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 div.gallery-title-1 h3 {
@@ -442,16 +445,18 @@ div.gallery-title-1 h3 {
 	color: #ffffff !important;
 	text-align: center;
 	margin: 0.5em 0.5em 0.3em 0.5em;
+    padding-top:0.5em;
 }
 
 div.gallery-title-1 h4 {
 	font-weight: 500;
 	font-size: 1.6em;
-	line-height: 1.4em;
+	line-height: 1.3em;
 	letter-spacing: 0.01em;
 	color: #ffffff !important;
 	text-align: center;
 	margin: 0em 0.5em 0.5em 0.5em;
+    text-overflow: ellipsis;
 }
 
 div.gallery-title-1 a {
@@ -694,13 +699,17 @@ div.module-footer-3 a:hover, div.module-footer-3 a:focus {
 	}
 }
 
-/* Header with hero image and horizontal navigation menu overlay */
 
-div.header-container {
+/* Homepage headers
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Header with banner image and horizontal navigation menu overlay */
+
+.header-container {
     z-index: -1;
     margin-top: -2%;
     padding: 0;
-    border-top: 1.5px solid #c3142d;
+    border-top: 3px solid #c3142d;
 }
 
 .header-container img {
@@ -709,7 +718,7 @@ div.header-container {
     position: relative;
     display: block;
     float: none;
-    border-top: 1.5px solid #c3142d;
+    border-top: 3px solid #c3142d;
     margin: 0;
     padding: 0;
 }
@@ -770,7 +779,113 @@ div.header-container {
 }
 
 .header-nav ul li a:hover, .header-nav ul li a:focus {
-    background: #ffffff;
-    color: #c3142d;
+    background: rgba(0,0,0,.8);
+    color: #ffffff;
     text-shadow: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+div.frontpage-text {
+    margin-top:-4em;
+    margin-bottom: 3em;
+}
+
+/* Header with hero image and call-to-action button */
+
+.header-hero {
+    position: relative;
+    margin: 0em 0em 2em 0em;
+    padding: 0;
+}
+
+.header-hero img {
+    object-fit: cover;
+	width: 100% !important;
+	height: auto !important;
+    margin: 0;
+    padding: 0;
+    border-bottom: 10px solid #000000;
+    border-left: 0.5px solid #000000;
+    border-right: 0.5px solid #000000;
+    border-top: 0.5px solid #000000;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff !important;
+}
+
+.hero-text h3, .hero-text h4 {
+    color: #ffffff !important;
+}
+
+.hero-text h3 {
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+
+.hero-text p {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.hero-button {
+    background:#c3142d;
+    color: #fff !important;
+    outline: 2px solid #fff;
+    outline-offset: -10px;
+    display: inline-block;
+    padding: 2em 2.5em;
+    transition: all .3s ease;
+    border: 1px solid #c3142d;
+    margin: 0;
+}
+
+.hero-button:after {
+    content: "»";
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 0 .25em;
+}
+
+.hero-button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.hero-button:hover, .hero-button:focus {
+    background:#950f22;
+    outline-offset: -14px;
+    box-shadow: 0 0 4px
+    rgba(70,70,70,.4);
+}
+
+/* Temporary paragraph styling to be deleted in final version
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+p {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: var(--ic-brand-font-color-dark);
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div.frontpage-text {
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+h2.course-title {
+    margin-bottom: 1em;
 }
