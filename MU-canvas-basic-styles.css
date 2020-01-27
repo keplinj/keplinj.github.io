@@ -13,6 +13,7 @@
 - Typography 
 - Special-Emphasis Blocks
 - Images
+- Buttons
 - Module Menus
 - Homepage Headers
 */
@@ -190,7 +191,7 @@ h2, h2.course-title, h3, h4, h5, h6 {
 
 h1.page-title {
     font-family: Georgia,"Times New Roman",serif !important;
-	font-weight: 500 !important;
+	font-weight: 700 !important;
     line-height: 1.2em;
     color: #ffffff;
     display: flex;
@@ -199,19 +200,15 @@ h1.page-title {
     align-items: center;
     text-align: center;
     background-color: #c3142d;
-    padding: 0.4em 0em;
+    padding: 0.6em 0em;
 }
 
 h1.page-title:before, h1.page-title:after {
     content: '';
     border-top: 2px solid #ffffff;
-    margin: 0 20px 0 0;
+    margin: 0 20px;
     flex: 1 0 20px;
   }
-
-h1.page-title:after {
-    margin: 0 0 0 20px;
-}
 
 h2 {
 	font-size: 2.1em;
@@ -221,84 +218,133 @@ h3 {
 	font-size: 1.7em;
 }
 
+
 /* Special-Emphasis Blocks
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Making full-width special-emphasis information blocks with automagically appearing icons > for use with longer blocks of content */
+/* Creating a box with a red dotted background and centered white text */
 
-div.red-border {
+div.red-dot {
     position: relative;
     margin-bottom: 2em;
-    border: 3px solid #ffffff;
-    background-color: #c3142d;
+    outline: 1px solid #ffffff;
+    outline-offset: -10px;
     text-align: center;
+    background: url(http://www.miamioh.edu/_files/images/patterns/white-dot.png);
+    background-color: #c3142d;
+    background-size: 9px;
+    color: #fff;
+    padding: 2em;
 }
 
-div.red-border p {
-    padding: 0.5em 1em;
+div.red-dot p {
     color: #ffffff;
     font-weight: 700;
 }
 
-div.note {
-	background-color: #ecede2;
-	padding: 0.8em 2em 0.8em 1em;
-	border: 5px solid #F3F3EC;
-	border-radius: 4px;	
-	margin: 1.6em 0em 1.6em 1.32em;
+div.red-dot h2, div.red-dot h3 {
+    font-size: 1.7em;
+    font-weight: 500;
+    color: #ffffff !important;
+    margin: 0.25em 0 0 0;
+    text-shadow: 0.4px 0.4px 0.8px #c3142d;
+}
+
+
+/* Creating a box with a white background and red border with an information icon */
+
+div.info {
+	padding: 0.8em 2em 0.8em 0.6em;
+	border: 8px double #c3142d;
+	margin: 1.2em 0em 1.2em 1.6em;
 	position: relative;
-	padding-left: 2.5em;
+	padding-left: 2.1em;
 	max-width:800px;
 }
 
-div.note::before {	
-	content: url(http://testndlearning.wpengine.com/wp-content/uploads/2020/01/info-icon-blue-52.png);
-	position: absolute;
-	left: -1.8em;
-	margin-top: 0.45em;
+div.info::before {	
+    content: url("https://jjkeplinger.com/wp-content/uploads/info-icon-small.png");
+    position: absolute;
+	left: -1.7em;
+	margin-top: 0.8em;
 }
 
-div.note > p {
+div.info > p {
 	max-width: 800px;
 }
 
-/* Making smaller special-emphasis blocks with automagically appearing icons > for use with one line of text. */
 
-div.note-small-info {
-	background-color: #ecede2;
-	padding: 0.5em 2em 0.5em 1em;
-	border: 2px solid #F3F3EC;
-	border-radius: 4px;	
-	margin: 1.6em 0em 1.6em 1.32em;
-	position: relative;
-	padding-left: 2em;
-	max-width: 400px;
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* White button with red text & borders */
+
+.white-button {
+    background:#ffffff;
+    color: #c3142d !important;
+    outline: 2px solid #c3142d;
+    outline-offset: -8px;
+    display: inline-block;
+    padding: 1.5em 2em;
+    transition: all .3s ease;
+    border: 1px solid #c3142d;
+    margin: 0;
 }
 
-div.note-small-info::before {	
-	content: url(http://testndlearning.wpengine.com/wp-content/uploads/2020/01/info-icon-blue-42.png);
-	position: absolute;
-	left: -1.2em;
-	margin-top: 0.2em;
+.white-button:after {
+    content: "»";
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 0 .25em;
 }
 
-div.note-small-download {
-	background-color: #ecede2;
-	padding: 0.5em 2em 0.5em 1em;
-	border: 2px solid #F3F3EC;
-	border-radius: 4px;	
-	margin: 1.6em 0em 1.6em 1.32em;
-	position: relative;
-	padding-left: 2em;
-	max-width: 400px;
+.white-button a {
+    text-decoration: none;
+    color: #c3142d;
+    font-size: 1.4em;
+    font-weight: 700;
 }
 
-div.note-small-download::before {	
-	content: url(http://testndlearning.wpengine.com/wp-content/uploads/2020/01/download-icon-blue-42.png);
-	position: absolute;
-	left: -1.2em;
-	margin-top: 0.2em;
+.white-button:hover, .white-button:focus {
+    outline-offset: -10px;
+    box-shadow: 0 0 4px rgba(70,70,70,.4);
+    outline: 3.5px solid #c3142d;
 }
+
+/* Red button with white text & borders */
+
+.red-button {
+    background:#c3142d;
+    color: #fff !important;
+    outline: 2px solid #fff;
+    outline-offset: -8px;
+    display: inline-block;
+    padding: 1.5em 2em;
+    transition: all .3s ease;
+    border: 1px solid #c3142d;
+    margin: 0;
+}
+
+.red-button:after {
+    content: "»";
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 0 .25em;
+}
+
+.red-button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.red-button:hover, .red-button:focus {
+    background:#950f22;
+    outline-offset: -10px;
+    box-shadow: 0 0 4px rgba(70,70,70,.4);
+}
+
 
 /* Images
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -836,43 +882,11 @@ div.frontpage-text {
     font-weight: 300;
 }
 
-.hero-button {
-    background:#c3142d;
-    color: #fff !important;
-    outline: 2px solid #fff;
-    outline-offset: -10px;
-    display: inline-block;
-    padding: 2em 2.5em;
-    transition: all .3s ease;
-    border: 1px solid #c3142d;
-    margin: 0;
-}
-
-.hero-button:after {
-    content: "»";
-    font-size: 1.5em;
-    font-weight: 700;
-    margin: 0 0 0 .25em;
-}
-
-.hero-button a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.5em;
-    font-weight: 700;
-}
-
-.hero-button:hover, .hero-button:focus {
-    background:#950f22;
-    outline-offset: -14px;
-    box-shadow: 0 0 4px
-    rgba(70,70,70,.4);
-}
 
 /* Temporary paragraph styling to be deleted in final version
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-p {
+p, ul li, ol li {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 1rem;
     font-weight: normal;
