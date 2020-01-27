@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic columns & page layout</title>
+<link href="/MU-canvas-basic-styles.css" rel="stylesheet" type="text/css">
+<link href="file:///Macintosh HD/Users/jenniferkeplinger/Desktop/CanvasCSS/MU-canvas-basic-styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1 class="page-title">Basic Columns & Page Layout</h1>
+    <div class="page">
+<p>The classes listed on this page can be used to build the structure for a page and create a flexbox grid for content.</p>
+<h2>Limiting Overall Width: The "Page" Class</h2>
+<p>Wrap all of the content in your page in a div with the "page" class to limit its overall width to 1000px and the width of all paragraphs within it to 800px, which increases readability when you have a lot of text. (Note: The page class is applied to this page.)</p>
+<p>Also, you can wrap just part of a page in a div with the "page" class if you have text interspersed with full-width images or videos.</p>
+<hr>
+<h2>Creating Columns: Flex Grid Classes</h2>
+<p>You can wrap content in div tags to create columns, which is useful when you want things to appear side by side at wider screen widths. Here's how it works:</p>
+<ol>
+<li>Wrap all of the content that you're putting into columns in a div with a "row" class.</li>
+<li>Inside that div, add additional divs to create columns; options for their classes are half, one-third, and two-thirds.</li>
+</ol>
+<p>These blocks are laid out in our grid with color backgrounds added so you can see the columns' dimensions.</p>
+    </div>
+<div class="row" style="border-bottom: 3px solid #ffffff;">
+<div class="half" style="background-color: #464646; text-align: center; color: #ffffff;">
+<p>This is a half column.</p>
+</div>
+<div class="half" style="background-color: #C3142D; text-align: center; color: #ffffff;">
+<p>This is a half column.</p>
+</div>
+</div>
+<div class="row" style="border-bottom: 3px solid #ffffff;">
+<div class="one-third" style="background-color: #464646; text-align: center; color: #ffffff;">
+<p>This is a one-third column.</p>
+</div>
+<div class="two-thirds" style="background-color: #C3142D; text-align: center; color: #ffffff;">
+<p>This is a two-thirds column.</p>
+</div>
+</div>
+<div class="row" style="border-bottom: 3px solid #ffffff;">
+<div class="two-thirds" style="background-color: #464646; text-align: center; color: #ffffff;">
+<p>This is a two-thirds column.</p>
+</div>
+<div class="one-third" style="background-color: #C3142D; text-align: center; color: #ffffff;">
+<p>This is a one-third column.</p>
+</div>
+</div>
+<div class="row" style="border-bottom: 3px solid #ffffff;">
+<div class="one-third" style="background-color: #C3142D; text-align: center; color: #ffffff;">
+<p>This is a one-third column.</p>
+</div>
+<div class="one-third" style="background-color: #464646; text-align: center; color: #ffffff;">
+<p>This is a one-third column.</p>
+</div>
+<div class="one-third" style="background-color: #C3142D; text-align: center; color: #ffffff;">
+<p>This is a one-third column.</p>
+</div>
+</div>
+    </body>
+    </html>
