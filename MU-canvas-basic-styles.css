@@ -943,15 +943,15 @@ div.frontpage-text {
 /* Styling headings */
 
 .section-white h3, .section-gray h3 {
-    color:#666666 !important;
+    color:#363636 !important;
     text-transform:uppercase;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif !important;
     text-align: center !important;
-    margin-top:0;
+    margin-top:0.2;
 }
 
 .section-white h4, .section-gray h4 {
-    color:#666666 !important;
+    color:#363636 !important;
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif !important;
     font-size: 1.6em;
     margin:0 0 -0.3em 0;
