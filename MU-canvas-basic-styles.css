@@ -404,12 +404,10 @@ img.full {
 
 img.banner {
 	max-width: 2100px;
-	margin-left: 0;
-	margin-right: 0;
+	margin:0 auto 1% auto;
+    border: 1px solid #464646;
 	width: 100%;
 	height: auto;
-	margin-top: 0;
-	margin-bottom:1%;
 	padding: 0;
 }
 
@@ -959,8 +957,6 @@ div.frontpage-text {
 
 .section-white img, .section-gray img {
     max-width: 2100px;
-	margin-left: 0;
-	margin-right: 0;
 	width: 100%;
 	height: auto;
 	margin:0 auto 8px auto;
